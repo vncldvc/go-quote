@@ -1528,7 +1528,7 @@ func NewEtfList() ([]string, error) {
 // NewEtfFile - download a list of etf symbols to a file
 func NewEtfFile(filename string) error {
 	if filename == "" {
-		filename = "etf.txt"
+		filename = "etfs.txt"
 	}
 	etfs, err := NewEtfList()
 	if err != nil {
@@ -1901,7 +1901,7 @@ func NewMarketFile(market, filename string) error {
 	}
 	if market == "allmarkets" {
 		for _, m := range ValidMarkets {
-			filename = m + ".txt"
+			filename = m + "s.txt"
 			syms, err := NewMarketList(m)
 			if err != nil {
 				Log.Println(err)
@@ -1914,7 +1914,7 @@ func NewMarketFile(market, filename string) error {
 
 	// default filename
 	if filename == "" {
-		filename = market + ".txt"
+		filename = market + "s.txt"
 	}
 	syms, err := NewMarketList(market)
 	if err != nil {
