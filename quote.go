@@ -1666,7 +1666,7 @@ func NewMarketList(market string) ([]string, error) {
 	}
 
 	req, err := http.NewRequest("GET", url, nil)
-	req.Header.Add("User-Agent", "markcheno/go-quote")
+	req.Header.Add("User-Agent", "vncldvc/go-quote")
 	req.Header.Add("Accept", "application/xml")
 	req.Header.Add("Content-Type", "application/xml; charset=utf-8")
 	client := &http.Client{}
